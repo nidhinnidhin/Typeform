@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typeform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMyIgaGVpZ2h0PSIyMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDUuMzRDMC0xLjgyIDEuMzktMy43MiAzLjcyLTMuNzJjMi4zNCAwIDMuNzMgMS44MiAzLjczIDUuMzRWMThjMCAzLjUyLTEuNCA1LjM0LTMuNzMgNS4zNFMwIDE5LjUyIDAgMTZWNS4zNFpNMjUuMDggMGgtNy43Yy02LjkgMC03LjQ0IDIuOTgtNy40NCA2Ljk2bC0uMDEgNy40MmMwIDQuMTQuNTIgNi45NiA3LjQ4IDYuOTZoNy42N2M2LjkyIDAgNy40My0yLjk3IDcuNDMtNi45NFY2Ljk3YzAtMy45OS0uNTMtNi45Ny03LjQzLTYuOTdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjwvcGF0aD48L3N2Zz4="
+    />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="33"
+          height="22"
+          fill="none"
+        >
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M0 5.34C0 1.82 1.39 0 3.72 0c2.34 0 3.73 1.82 3.73 5.34V16c0 3.52-1.4 5.34-3.73 5.34S0 19.52 0 16V5.34ZM25.08 0h-7.7c-6.9 0-7.44 2.98-7.44 6.96l-.01 7.42c0 4.14.52 6.96 7.48 6.96h7.67c6.92 0 7.43-2.97 7.43-6.94V6.97c0-3.99-.53-6.97-7.43-6.97Z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="108"
+          height="24"
+          fill="none"
+          class="sc-91abde0-1 bULroO"
+        >
+          <path
+            fill="currentColor"
+            d="M69.87 16.61c-2.22 0-3.37-1.83-3.37-4.08s1.13-3.99 3.37-3.99c2.29 0 3.37 1.82 3.37 3.99-.02 2.29-1.16 4.08-3.37 4.08ZM48.1 8.54c1.3 0 1.84.76 1.84 1.42 0 1.6-1.62 2.29-5.01 2.39 0-1.97 1.12-3.8 3.17-3.8Zm-14.44 8.07c-2.1 0-2.99-1.71-2.99-4.08 0-2.35.9-3.99 3-3.99 2.12 0 3.12 1.7 3.12 3.99 0 2.39-1.04 4.08-3.13 4.08Zm-17.8-10.4h-3.3l5.46 12.51c-1.04 2.31-1.6 2.89-2.32 2.89-.77 0-1.49-.62-2-1.16l-1.45 1.92a5.14 5.14 0 0 0 3.7 1.63c1.73 0 3.05-1 3.82-2.79l6.3-15.02h-3.24l-3.28 8.97-3.7-8.95Zm87.1 2.33c1.6 0 1.92 1.1 1.92 3.67v6.75h2.85v-8.52c0-3.07-2.1-4.4-4.05-4.4-1.73 0-3.31 1.07-4.2 3.06a4.01 4.01 0 0 0-3.96-3.07c-1.63 0-3.25 1.04-4.13 2.97V6.21h-2.85v12.73h2.85V13.5c0-2.74 1.44-4.96 3.4-4.96 1.6 0 1.9 1.1 1.9 3.67v6.75h2.86l-.02-5.46c0-2.74 1.46-4.96 3.42-4.96ZM80.14 6.21h-1.36v12.73h2.85v-4.88c0-3.09 1.36-5.18 3.39-5.18.52 0 .96.02 1.44.22l.44-3c-.36-.05-.68-.09-1-.09-2 0-3.45 1.38-4.29 3.15V6.21h-1.47Zm-10.28-.2c-3.77 0-6.31 2.87-6.31 6.5 0 3.76 2.58 6.57 6.31 6.57 3.8 0 6.38-2.89 6.38-6.57C76.23 8.86 73.6 6 69.87 6Zm-21.61 10.6a2.98 2.98 0 0 1-3.05-2.29c3.77-.16 7.46-1.08 7.46-4.4 0-1.91-1.89-3.89-4.6-3.89-3.64 0-6.1 2.97-6.1 6.5 0 3.68 2.42 6.57 6.05 6.57a6.62 6.62 0 0 0 5.39-2.49l-1.38-1.87c-1.47 1.5-2.37 1.87-3.77 1.87ZM34.22 6.01c-1.44 0-2.89.84-3.45 2.16V6.2h-2.84v17.73h2.84v-6.33c.6.91 1.99 1.51 3.21 1.51 3.8 0 5.8-2.8 5.8-6.6-.02-3.74-1.99-6.5-5.56-6.5Zm-19.97-4.9H.82v2.77h5.25v15.06h2.99V3.88h5.2V1.12Zm42.33 5.1h-1.7v2.55h1.7v10.18h2.85V8.76h2.76V6.21h-2.76V4.22c0-1.27.52-1.71 1.7-1.71.44 0 .84.12 1.38.3l.65-2.4A5.44 5.44 0 0 0 60.9 0c-2.73 0-4.33 1.63-4.33 4.46v1.75Z"
+          ></path>
+        </svg>
+      </div>
+      <div class="header-btns">
+        <button class="header-btn">
+          Products
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="16"
+            fill="none"
+            class="sc-386f720f-0 fbWMJR"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12.75 5.33 8.854 9.226a.5.5 0 0 1-.708 0L4.25 5.33"
+            ></path>
+          </svg>
+        </button>
+        <button class="header-btn">
+          Solutions
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="16"
+            fill="none"
+            class="sc-386f720f-0 fbWMJR"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12.75 5.33 8.854 9.226a.5.5 0 0 1-.708 0L4.25 5.33"
+            ></path>
+          </svg>
+        </button>
+        <button class="header-btn">
+          Resources
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="16"
+            fill="none"
+            class="sc-386f720f-0 fbWMJR"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12.75 5.33 8.854 9.226a.5.5 0 0 1-.708 0L4.25 5.33"
+            ></path>
+          </svg>
+        </button>
+        <button class="header-btn">Enterprise</button>
+        <button class="header-btn">Pricing</button>
+      </div>
+      <div class="header-buttons">
+        <button class="login-btn">Log in</button>
+        <button class="signup-btn">Sign up</button>
+      </div>
+    </header>
+    <section class="section-1">
+      <div>
+        <video
+          src="https://www.typeform.com/static/homepage/hero/hero.webm"
+          autoplay loop muted playsinline
+          height="600"
+          width="670"
+        ></video>
+      </div>
+      <div class="section-1-right">
+        <span class="section-1-right-head">Make forms worth filling out</span>
+        <span class="section-1-right-para"
+          >Get more data—like signups, feedback, and anything else—with forms
+          designed to be
+          <span class="section-1-right-bold"
+            >refreshingly different.</span
+          ></span
+        >
+        <button class="section-1-right-btn">Get started-it's free</button>
+      </div>
+    </section>
+    <section class="section-2">
+      <div class="section-2-top-container">
+        <span class="section-2-top-text"
+          >Rated 4.5 out of 600+ reviews on G2.com and trusted by</span
+        >
+        <div class="section-2-companies">
+          <img
+            src="https://www.typeform.com/static/homepage/partners/airbnb-logo.svg"
+            alt=""
+            height="35"
+            class="section-2-company-logos"
+          />
+          <img
+            src="https://www.typeform.com/static/homepage/partners/mailchimp-logo.svg"
+            alt=""
+            height="35"
+            class="section-2-company-logos"
+          />
+          <img
+            src="https://www.typeform.com/static/homepage/partners/hermes-logo.svg"
+            alt=""
+            height="35"
+            class="section-2-company-logos"
+          />
+          <img
+            src="https://www.typeform.com/static/homepage/partners/hubspot-logo.svg"
+            alt=""
+            height="35"
+            class="section-2-company-logos"
+          />
+          <img
+            src="https://www.typeform.com/static/homepage/partners/barrys-logo.svg"
+            alt=""
+            height="35"
+            class="section-2-company-logos"
+          />
+        </div>
+      </div>
+      <div class="section-2-bottom-text-container">
+        <span class="section-2-bottom-text"
+          >Refreshingly different, by design</span
+        >
+      </div>
+    </section>
+    <section class="section-3">
+      <div class="section-3-left">
+        <span class="section-3-head">Looks striking. Feels effortless.</span>
+        <span class="section-3-para">
+          <span class="section-3-para-bold">Impress your form takers.</span>
+          Catch their eye with striking visuals, and make form-filling feel
+          effortless by replacing walls of questions with just one at a
+          time.</span
+        >
+        <button class="section-3-btn">Sign up</button>
+      </div>
+      <div>
+        <video
+          src="https://www.typeform.com/static/homepage/video-text-module/for-them.webm"
+          autoplay loop muted playsinline
+          height="500"
+          width="500"
+        ></video>
+      </div>
+    </section>
+    <section class="section-4">
+      <div>
+        <video
+          src="https://www.typeform.com/static/homepage/video-text-module/for-you.webm"
+          autoplay loop muted playsinline
+          height="500"
+          width="500"
+        ></video>
+      </div>
+      <div class="section-4-right">
+        <span class="section-4-head">Embeds smoothly. Reveals more.</span>
+        <span class="section-4-para">
+          <span class="section-4-para-bold">Collect more and better data.</span>
+          Embed forms where people see them, from web to email. Ask the right
+          follow-up question at the right time to reveal deeper insights.</span
+        >
+        <button class="section-4-btn">Sign up</button>
+      </div>
+    </section>
+    <section class="section-5">
+      <div class="section-5-left">
+        <div>
+          <span class="section-5-left-head"
+            >Works with your existing workflow</span
+          >
+        </div>
+        <a href="" class="section-5-left-link">Browse 300+ integrations</a>
+      </div>
+      <div class="section-5-right">
+        <div class="section-5-imgs-box">
+          <img
+            src="https://www.typeform.com/static/homepage/integrations/zapier-logo.svg"
+            alt=""
+          />
+        </div>
+        <div class="section-5-imgs-box">
+          <img
+            src="https://www.typeform.com/static/homepage/integrations/calendly-logo.svg"
+            alt=""
+          />
+        </div>
+        <div class="section-5-imgs-box">
+          <img
+            src="https://www.typeform.com/static/homepage/integrations/hubspot-logo.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="section-6">
+      <div class="section-6-head-container">
+        <span class="section-6-head">Do it all with a form</span>
+        <p class="section-6-desc">
+          Whatever your goal, start with a ready-made template.
+        </p>
+      </div>
+      <div>
+        <ul class="section-6-list">
+          <li class="section-6-listitem">
+            <span class="section-6-listitem-head">Marketing</span>
+            <ul class="section-6-inner-list">
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Signups
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Branding
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Customer
+                feedback
+              </li>
+            </ul>
+          </li>
+          <li class="section-6-listitem">
+            <span class="section-6-listitem-head">Product</span>
+            <ul class="section-6-inner-list">
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Beta
+                testing
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Product
+                research
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Product
+                feedback
+              </li>
+            </ul>
+          </li>
+          <li class="section-6-listitem">
+            <span class="section-6-listitem-head">Customer success</span>
+            <ul class="section-6-inner-list">
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> FAQ
+                builder
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Net
+                promoter score
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Customer
+                satisfaction
+              </li>
+            </ul>
+          </li>
+          <li class="section-6-listitem">
+            <span class="section-6-listitem-head">HR</span>
+            <ul class="section-6-inner-list">
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Job
+                application
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> 360
+                degree feedback
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Employee
+                engagement
+              </li>
+            </ul>
+          </li>
+          <li class="section-6-listitem">
+            <span class="section-6-listitem-head">Creators</span>
+            <ul class="section-6-inner-list">
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Contact
+                details
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Customer
+                feedback
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Product
+                recommendation
+              </li>
+            </ul>
+          </li>
+          <li class="section-6-listitem">
+            <span class="section-6-listitem-head">General business</span>
+            <ul class="section-6-inner-list">
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Referral
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i>
+                Registration
+              </li>
+              <li class="section-6-listitem-desc">
+                <i class="fa-solid fa-arrow-right" id="right-icon"></i> Client
+                onboarding
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="section-6-link">
+        <a href="" class="section-6-link">Browse all templates</a>
+      </div>
+    </section>
+    <section class="section-7">
+      <div class="section-7-container">
+        <div class="section-7-head-container">
+          <span class="section-7-head">Why Typeform?</span>
+          <p class="section-7-desc">Because after switching to us...</p>
+        </div>
+        <div class="section-7-bottom-container">
+          <div class="section-7-bottom-cards">
+            <span class="section-7-bottom-card-head">96%</span>
+            <p class="section-7-bottom-card-desc">
+              of customers say they have a better brand experience
+            </p>
+          </div>
+          <div class="section-7-bottom-cards">
+            <span class="section-7-bottom-card-head">95%</span>
+            <p class="section-7-bottom-card-desc">
+              of customers say they gather more data, more easily
+            </p>
+          </div>
+          <div class="section-7-bottom-cards">
+            <span class="section-7-bottom-card-head">96%</span>
+            <p class="section-7-bottom-card-desc">
+              of customers say they reveal deeper insights from data
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-8">
+      <div class="section-8-head-container">
+        <span class="section-8-head">Break the norm of forms</span>
+      </div>
+      <div class="section-8-desc-container">
+        <span class="section-8-desc">Our Free Plan lets you:</span>
+        <span class="section-8-para">Create unlimited forms</span>
+        <span class="section-8-para">Access 3,000+ templates</span>
+        <span class="section-8-para">Start getting responses</span>
+      </div>
+      <div>
+        <button class="section-8-signup-btn">Sign up</button>
+        <button class="section-8-compare-btn">Compare plans</button>
+      </div>
+    </section>
+    <footer class="footer">
+      <ul class="footer-list">
+        <li class="footer-listitem">
+          <h5>PRODUCT</h5>
+          <ul class="inner-list">
+            <li class="footer-inner-listitem">Pricing</li>
+            <li class="footer-inner-listitem">
+              Enterprise
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem" style="cursor: pointer">
+              <svg
+                fill="#fff"
+                height="24"
+                viewBox="0 0 134 24"
+                width="94"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>VideoAsk</title>
+                <path
+                  d="M32.4 6.92h5.052l3.126 8.02 3.126-8.02h5.053l-5.154 12.286h-2.051L32.399 6.92zM59.148 19.4c-1.808 0-3.2-.568-4.176-1.706-.962-1.154-1.442-2.697-1.442-4.632 0-1.933.48-3.47 1.441-4.607.977-1.153 2.37-1.73 4.176-1.73.6-.001 1.192.132 1.734.39.554.26.97.568 1.246.926V1.947h5.029v17.259h-3.029v-1.268c-.195.357-.57.69-1.123 1-.538.308-1.156.462-1.856.462zm.415-2.584c.83 0 1.506-.325 2.027-.974.537-.667.806-1.592.806-2.78 0-1.186-.269-2.104-.806-2.754-.521-.666-1.197-1-2.027-1-.83 0-1.514.334-2.052 1-.537.65-.806 1.568-.806 2.754 0 1.17.27 2.088.806 2.755.538.666 1.222.999 2.052.999zM73.366 19.4c-1.336 0-2.45-.308-3.346-.926a5.794 5.794 0 01-1.954-2.388 7.772 7.772 0 01-.61-3.024c0-1.04.203-2.04.61-2.998a5.589 5.589 0 011.954-2.389c.896-.633 2.01-.95 3.346-.95 1.286 0 2.36.309 3.224.926a5.394 5.394 0 011.904 2.291c.401.898.61 1.87.612 2.852v1.244h-8.67c.031.472.17.918.414 1.34.26.423.619.772 1.075 1.048.472.26 1.01.39 1.612.39 1.237 0 2.238-.585 3.004-1.754l2.417 1.267c-1.172 2.048-3.036 3.072-5.592 3.072V19.4zm2.882-7.654c-.163-.748-.48-1.356-.952-1.828-.473-.472-1.116-.707-1.93-.707-.782 0-1.432.252-1.954.755a3.24 3.24 0 00-.952 1.78h5.788zM87.192 19.4c-1.22 0-2.287-.284-3.2-.853a5.88 5.88 0 01-2.124-2.291c-.489-.975-.733-2.04-.733-3.194 0-1.153.244-2.21.733-3.168a5.837 5.837 0 012.125-2.316c.912-.568 1.978-.853 3.199-.853 1.222 0 2.288.284 3.2.853a5.666 5.666 0 012.1 2.316c.505.958.758 2.015.758 3.168a6.844 6.844 0 01-.758 3.194 5.704 5.704 0 01-2.1 2.291c-.912.569-1.978.853-3.2.853zm0-2.584c.994 0 1.76-.365 2.296-1.096.554-.732.83-1.618.83-2.658 0-1.04-.276-1.925-.83-2.656-.537-.732-1.302-1.097-2.296-1.097-.993 0-1.766.365-2.32 1.096-.538.732-.806 1.617-.806 2.657s.268 1.926.806 2.658c.554.731 1.327 1.096 2.32 1.096zM99.26 19.4c-1.09 0-1.986-.325-2.686-.974-.7-.65-1.05-1.568-1.05-2.756 0-.796.22-1.494.66-2.096.438-.617 1.058-1.088 1.855-1.413.798-.342 1.71-.512 2.735-.512h2.052v-.536c0-.65-.204-1.138-.611-1.463-.406-.325-.919-.488-1.538-.488-.472 0-.903.139-1.295.415-.374.26-.65.69-.83 1.292l-2.564-.731a4.488 4.488 0 011.71-2.463c.862-.633 1.856-.95 2.979-.95 1.596 0 2.833.398 3.713 1.194.879.78 1.318 2.096 1.318 3.949v7.338h-2.345l-.317-1.56c-.96 1.17-2.223 1.754-3.786 1.754zm.415-2.462c.522 0 1.018-.113 1.491-.341.466-.21.87-.538 1.172-.95.309-.423.464-.91.464-1.463v-.268h-2.223c-.733 0-1.302.146-1.71.438-.39.276-.586.708-.586 1.292 0 .342.123.642.367.903.244.26.586.39 1.025.39zm14.023 2.462c-2.768 0-4.576-1.226-5.423-3.68l2.736-.951c.228.715.562 1.235 1.001 1.56.44.325 1.034.488 1.783.488.587 0 1.067-.106 1.441-.317.391-.228.586-.512.586-.854 0-.324-.187-.584-.561-.78-.375-.21-1.051-.422-2.027-.633-2.768-.602-4.152-1.918-4.152-3.95 0-.698.203-1.316.61-1.852a3.901 3.901 0 011.612-1.268 5.408 5.408 0 012.149-.438c2.198 0 3.802.918 4.812 2.754l-2.174 1.512c-.586-1.122-1.457-1.682-2.613-1.682a2.15 2.15 0 00-1.124.292c-.309.195-.464.447-.464.756 0 .325.155.593.464.804.309.211.896.406 1.759.585 1.53.292 2.661.724 3.394 1.292.75.552 1.124 1.357 1.124 2.413 0 1.22-.473 2.187-1.417 2.901-.928.7-2.1 1.048-3.516 1.048zm8.16-17.453h5.028v9.531l4.03-4.558h5.663l-5.25 5.63 5.813 6.656h-3.664l-4.592-5.583v5.583h-3.028V1.947zM48.883 5.336c-.553 0-1.017-.186-1.392-.56-.374-.374-.561-.838-.561-1.39 0-.552.187-1.016.561-1.39.375-.373.84-.56 1.392-.56.554 0 1.019.187 1.392.56.375.374.563.838.563 1.39 0 .552-.188 1.016-.562 1.39-.374.374-.84.56-1.393.56zM47.37 6.92h5.028v12.286H47.37V6.92zM17.971 7.142a3.574 3.574 0 01-3.577-3.57A3.574 3.574 0 0117.97 0a3.574 3.574 0 013.578 3.571 3.574 3.574 0 01-3.578 3.571zM7.178 7.142A3.574 3.574 0 013.6 3.572 3.574 3.574 0 017.178 0a3.574 3.574 0 013.577 3.571 3.574 3.574 0 01-3.577 3.571zM1.367 11.589c-.846 0-1.516.728-1.338 1.554A12.792 12.792 0 0012.533 23.2c6.134 0 11.26-4.307 12.505-10.057.178-.826-.492-1.554-1.338-1.554H1.367z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-listitem">
+          <h5>TEMPLATES</h5>
+          <ul class="inner-list">
+            <li class="footer-inner-listitem">
+              Popular templates
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">
+              Recent templates
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">
+              Popular categories
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">
+              Recent categories
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-listitem">
+          <h5>INTEGRATIONS</h5>
+          <ul class="inner-list">
+            <li class="footer-inner-listitem">
+              Popular integration apps
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">
+              More integration apps
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">
+              Popular app categories
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">
+              More app categories
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-listitem">
+          <h5>RESOURCES</h5>
+          <ul class="inner-list">
+            <li class="footer-inner-listitem">Blog</li>
+            <li class="footer-inner-listitem">Help center</li>
+            <li class="footer-inner-listitem">Community</li>
+            <li class="footer-inner-listitem">Tutorials</li>
+            <li class="footer-inner-listitem">FAQs</li>
+            <li class="footer-inner-listitem">
+              Why Typeform
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">Referral program</li>
+            <li class="footer-inner-listitem">
+              Partners
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">System status</li>
+            <li class="footer-inner-listitem">Developers / API</li>
+          </ul>
+        </li>
+        <li class="footer-listitem">
+          <h5>GET TO KNOW US</h5>
+          <ul class="inner-list">
+            <li class="footer-inner-listitem">About us</li>
+            <li class="footer-inner-listitem">Brand</li>
+            <li class="footer-inner-listitem">Contact sales</li>
+            <li class="footer-inner-listitem">
+              Terms & Conditions
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-89a0d814-0 iZSca-D sc-439ab550-3 kQuAuL"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.26342 2.97603L2.24581 0.958417C1.6984 0.410996 0.81085 0.410997 0.263428 0.958418L4.26342 4.95841L8.26343 0.958418C7.71597 0.410997 6.82845 0.410997 6.28103 0.958418L4.26342 2.97603Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </li>
+            <li class="footer-inner-listitem">Typeform (es)</li>
+            <li class="footer-inner-listitem">Newsletter</li>
+            <li class="footer-inner-listitem">
+              <i class="fa-brands fa-facebook" id="footer-social-icons"></i>
+              <i class="fa-brands fa-x-twitter" id="footer-social-icons"></i>
+              <i class="fa-brands fa-instagram" id="footer-social-icons"></i>
+              <i class="fa-brands fa-youtube" id="footer-social-icons"></i>
+              <i class="fa-brands fa-linkedin" id="footer-social-icons"></i>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <hr class="custom-line" />
+    </footer>
+    <footer class="footer-2">
+      <div class="footer2-texts">
+        <svg
+          fill="none"
+          height="17"
+          viewBox="0 0 12 17"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          class="sc-5876ea6-11 htzHev"
+        >
+          <rect
+            height="14"
+            transform="translate(1.47412 1.32788)"
+            width="10"
+          ></rect>
+          <path
+            d="M6.47412 8.32788C7.57698 8.32788 8.47412 7.43045 8.47412 6.32788C8.47412 5.22531 7.57698 4.32788 6.47412 4.32788C5.37126 4.32788 4.47412 5.22531 4.47412 6.32788C4.47412 7.43045 5.37126 8.32788 6.47412 8.32788Z"
+            stroke="currentcolor"
+          ></path>
+          <path
+            d="M2.94498 2.75822C3.88798 1.83593 5.14134 1.32788 6.47461 1.32788C7.80788 1.32788 9.06124 1.83593 10.0042 2.75822C11.7624 4.47797 11.9789 7.71563 10.4614 9.69496L6.47461 15.3279L2.48147 9.68643C0.970354 7.71563 1.18714 4.47797 2.94498 2.75822Z"
+            stroke="currentcolor"
+          ></path>
+        </svg>
+        <span>With love, from Barcelona</span>
+      </div>
+      <div class="footer2-texts">
+        <svg
+          height="17"
+          viewBox="0 0 20 20"
+          width="17"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zM9 17.9C5.1 17.4 2 14 2 10c0-.6.1-1.2.2-1.8L7 13v1c0 1.1.9 2 2 2v1.9zm6.9-2.5c-.3-.8-1-1.4-1.9-1.4h-1v-3c0-.6-.4-1-1-1H6V8h2c.6 0 1-.4 1-1V5h2c1.1 0 2-.9 2-2v-.4c2.9 1.2 5 4.1 5 7.4 0 2.1-.8 4-2.1 5.4z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+        <span
+          >English
+          <svg
+            fill="none"
+            height="5"
+            viewBox="0 0 9 5"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.35156 2.80708L2.33394 0.789472C1.78653 0.24205 0.898985 0.242052 0.351563 0.789472L4.35156 4.78946L8.35156 0.789472C7.80411 0.242052 6.91658 0.242052 6.36917 0.789472L4.35156 2.80708Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </span>
+      </div>
+      <div>
+        <a href="" class="footer-2-links">Cookie Settings</a>
+      </div>
+      <div>
+        <a href="" class="footer-2-links"
+          >Check our Cookie Policy to delete cookies</a
+        >
+      </div>
+      <div>
+        <a href="" class="footer-2-links">Report abuse</a>
+      </div>
+      <div>
+        <span class="footer2-texts">© Typeform</span>
+      </div>
+    </footer>
+  </body>
+</html>
