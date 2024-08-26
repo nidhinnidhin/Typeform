@@ -22,6 +22,7 @@ body {
 }
 .header-btn {
   display: flex;
+  font-family: sans-serif;
   justify-content: space-between;
   border: none;
   background-color: #fff;
